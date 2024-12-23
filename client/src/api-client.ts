@@ -50,8 +50,8 @@ export const login = async (formData: SignInFormData) => {
   return responseBody;
 };
 
-export const getFormById = async () => {
-  const response = await fetch(`${API_BASE_URL}/api/form/:formId`, {
+export const getFormById = async (formId: string | undefined) => {
+  const response = await fetch(`${API_BASE_URL}/api/form/${formId}`, {
     method: "GET",
     credentials: "include",
   });

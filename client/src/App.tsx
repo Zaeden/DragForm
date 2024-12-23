@@ -3,8 +3,9 @@ import Home from "./pages/Home";
 import SignUpForm from "./components/forms/SignUpForm";
 import SignInForm from "./components/forms/SignInForm";
 import { Toaster } from "react-hot-toast";
-import { useAuth } from "./contexts/AuthContext";
 import Builder from "./pages/Builder";
+import Layout from "./components/layouts/Layout";
+import useAuth from "./hooks/useAuth";
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -17,8 +18,22 @@ function App() {
 
         {isAuthenticated && (
           <>
-            <Route path="/builder/:formId" element={<Builder />} />
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/builder/:formId"
+              element={
+                <Layout>
+                  <Builder />
+                </Layout>
+              }
+            />
+            <Route
+              path="/"
+              element={
+                <Layout>
+                  <Home />
+                </Layout>
+              }
+            />
           </>
         )}
       </Routes>

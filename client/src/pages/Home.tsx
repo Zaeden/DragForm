@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import CreateForm from "../components/forms/CreateForm";
 import { CreateFormButton } from "../components/ui/CreateFormButton";
-import Navbar from "../components/ui/Navbar";
 import * as apiClient from "../api-client";
 import Toast from "../components/ui/Toast";
 import FormCard, { FormType } from "../components/ui/FormCard";
@@ -40,8 +39,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
-
       <div className="p-8">
         <div className="border-t border-b py-6 mb-6">
           <h2 className="font-bold text-4xl text-gray-700">Your forms</h2>

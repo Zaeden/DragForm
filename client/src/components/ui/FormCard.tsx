@@ -33,7 +33,7 @@ const FormCard: React.FC<FormCardProps> = ({ form }) => {
       </div>
 
       <div>
-        <div className="text-gray-400 font-normal">
+        <div className="text-gray-500 text-sm">
           {formatDistanceToNow(new Date(form.createdAt), { addSuffix: true })}
         </div>
 
@@ -46,7 +46,7 @@ const FormCard: React.FC<FormCardProps> = ({ form }) => {
       </div>
 
       {/* Card Content */}
-      <div className="mt-6 mb-2 h-[20px] truncate text-sm text-muted-foreground text-gray-400 font-normal">
+      <div className="mt-6 mb-2 h-[20px] truncate text-muted-foreground text-gray-500 font-normal">
         {form.description || "No description"}
       </div>
 

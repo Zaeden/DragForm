@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import * as apiClient from "../../api-client";
 import { FaSpinner } from "react-icons/fa";
 import Toast from "../ui/Toast";
-import { useAuth } from "../../contexts/AuthContext";
+import useAuth from "../../hooks/useAuth";
 
 export type SignInFormData = {
   email: string;
